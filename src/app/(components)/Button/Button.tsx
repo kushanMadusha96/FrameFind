@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Button.module.css'
 
 function Button(props: {
-    text: string, w: number, h: number, bc: string, borderWidth?: number, borderColor?: string, color?: string, br?: number, ml?: number, mr?: number, fw?:string
+    text: string, w: number | string, h: number, bc?: string, borderWidth?: number, borderColor?: string, color?: string, br?: number, ml?: number, mr?: number, fw?: string, fs?: number
 
 }) {
     return (
@@ -16,7 +16,7 @@ function Button(props: {
                 borderRadius: props.br,
                 marginLeft: props.ml,
                 marginRight: props.mr,
-                fontSize: 15,
+                fontSize: props.fs ? props.fs : 15,
                 fontWeight: props.fw
             }}>
             {props.text}
