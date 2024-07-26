@@ -1,0 +1,49 @@
+/* EventSelection.module.css */
+.formContainer {
+    width: 420px;
+    max-width: 420px;
+    height: fit-content;
+    border-radius: 3px;
+    margin-left: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+.headerText {
+    font-weight: bold;
+    font-size: 16px;
+    align-self: center;
+}
+
+.buttonGrid {
+    display: flex;
+    justify-content: center;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 2px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+

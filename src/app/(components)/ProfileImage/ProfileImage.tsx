@@ -1,10 +1,11 @@
 import Image, { StaticImageData } from 'next/image'
 import React from 'react'
 import seller from '../../../../public/user.jpg'
+import styles from './Profile.module.css'
 
 function ProfileImage(props: { imgUrl: string | StaticImageData, w: number | string, h: number | string, br?: number | string, alt: string, mr?: number, ml?: number }) {
     return (
-        <div style={{ width: props.w, height: props.h, marginRight: props.mr, marginLeft: props.ml, position: 'relative', }}>
+        <div style={{ width: props.w, height: props.h, marginRight: props.mr, marginLeft: props.ml }} className={styles.container}>
             <Image
                 src={props.imgUrl}
                 alt={props.alt}

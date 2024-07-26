@@ -1,4 +1,19 @@
-/* .input-placeholder::placeholder {
-    font-size: 1px;
-  }
-   */
+.inputContainer {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.label {
+  font-size: 13px;
+}
+
+.input {
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-top: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  outline: none;
+  font-Size:13px
+}

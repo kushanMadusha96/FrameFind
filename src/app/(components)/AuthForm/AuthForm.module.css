@@ -1,0 +1,53 @@
+/* AuthForm.module.css */
+.authForm {
+    width: 800px;
+    height: fit-content;
+    display: flex;
+    background-color: #FFC107;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.authFormLeft {
+    flex: 2;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: white;
+}
+
+.authFormHeader {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.authFormContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.authFormFooter {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.authFormFooterBold {
+    color: #FFC107;
+    font-weight: bold;
+}
+
+.authFormRight {
+    flex: 2;
+    background-color: #FFC107;
+    display: flex;
+    align-items: center;
+}

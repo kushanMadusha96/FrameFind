@@ -1,0 +1,6 @@
+/* Button.module.css */
+.button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

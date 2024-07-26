@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import NavBar from "./(components)/NavBar/NavBar";
 import Button from "./(components)/Button/Button";
@@ -21,11 +22,20 @@ import SocialLinksForm from "./(components)/SocialLinksForm/SocialLinksForm";
 import EventSelection from "./(components)/EventSelectionForm/EventSelection";
 import AuthBtn from "./(components)/AuthBtn/AuthBtn";
 import AuthForm from "./(components)/AuthForm/AuthForm";
+import user from "../../public/user.jpg"
+import AuthInput from "./(components)/AuthInput/AuthInput";
+import EventBtn from "./(components)/EventBtn/EventBtn";
+import FiveStar from "./(components)/FiveStar/FiveStar";
+import FormInput from "./(components)/FormInput/FormInput";
+import ProfileImage from "./(components)/ProfileImage/ProfileImage";
+import { use } from "react";
+import Review from "./(components)/Review/Review";
 
 export default function Home() {
   return (
     <>
-      <EventSelection />
+      <AuthBtn alt="wed"  imgUrl={user} text="wedw"/>
     </>
   );
 }
+// box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

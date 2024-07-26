@@ -1,0 +1,36 @@
+/* DropDown.module.css */
+.dropdownContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dropdownButton {
+    color: gray;
+    font-size: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.chevronIcon {
+    margin-left: 10px;
+    color: gray;
+}
+
+.menu {
+    border: 1px solid #EEEDEB;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    margin-top: 5px;
+    background: white;
+    z-index: 1000;
+}
+
+.menuItem {
+    display: block;
+    font-size: 15px;
+    padding: 5px 0;
+}

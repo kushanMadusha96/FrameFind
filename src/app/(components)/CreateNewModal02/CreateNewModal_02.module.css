@@ -1,0 +1,76 @@
+/* CreateNewModal_02.module.css */
+.modalContainer {
+    width: 600px;
+    height: fit-content;
+    margin-left: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.header {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.headerTitle {
+    position: absolute;
+    display: inline-block;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.closeIcon {
+    position: absolute;
+    right: 0;
+    color: gray;
+}
+
+.assetsContainer {
+    max-width: 600px;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+    scrollbar-width: thin;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.addButton {
+    width: 230px;
+    height: 40px;
+    border: 1px solid #FBBC05;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+}
+
+.addButtonText {
+    position: absolute;
+    left: 10px;
+}
+
+.addButtonIcon {
+    position: absolute;
+    right: 10px;
+}
+
+.selectedAsset {
+    display: inline-flex;
+    position: relative;
+    margin: 5px;
+}
+
+.removeIcon {
+    position: absolute;
+    right: -2px;
+    top: -6px;
+}

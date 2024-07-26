@@ -1,8 +1,10 @@
 'use client'
-import React, { useState } from 'react'
-import FormInput from '../FormInput/FormInput'
-import Button from '../Button/Button'
-import EventBtn from '../EventBtn/EventBtn'
+
+import React, { useState } from 'react';
+import FormInput from '../FormInput/FormInput';
+import Button from '../Button/Button';
+import EventBtn from '../EventBtn/EventBtn';
+import styles from './EventSelectionForm.module.css'; // Import the CSS module
 
 type FormInputType = {
     lbl: string;
@@ -27,12 +29,12 @@ function EventSelection() {
     };
 
     return (
-        <form style={{ width: 420, maxWidth: 420, height: 'fit-content', borderRadius: 3, marginLeft: 10, paddingBottom: 20, boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}>
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: 15, marginBottom: 20, paddingTop: 15 }}>
-                <span style={{ fontWeight: 'bold', fontSize: 16, alignSelf: 'center' }}>Select Your Events</span>
+        <form className={styles.formContainer}>
+            <div className={styles.header}>
+                <span className={styles.headerText}>Select Your Events</span>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: ' repeat(3, 1fr)', gridRowGap: 2 }}>
+            <div className={styles.buttonGrid}>
+                <div className={styles.gridContainer}>
                     <EventBtn event='Wedding' ml={3} mr={3} mb={6} onClick={() => handleToggleInput('Wedding')} isSelect={isSelected('Wedding')} />
                     <EventBtn event='Birthday' ml={3} mr={3} mb={6} onClick={() => handleToggleInput('Birthday')} isSelect={isSelected('Birthday')} />
                     <EventBtn event='Anniversary' ml={3} mr={3} mb={6} onClick={() => handleToggleInput('Anniversary')} isSelect={isSelected('Anniversary')} />
@@ -42,7 +44,7 @@ function EventSelection() {
                 </div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 5 }}>
+            <div className={styles.inputContainer}>
                 {
                     formInputs.map((form_input, index) => (
                         <FormInput key={index} w={370} id={form_input.lbl} type='text' lbl={form_input.lbl} placeholder='Enter starter price' />
@@ -50,14 +52,12 @@ function EventSelection() {
                 }
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: 10 }}>
-                <div style={{}}>
-                    <Button text='Next' w={185} h={40} bc='#FFC107' color='white' br={3} mr={5} />
-                    <Button text='Fill Later' w={185} h={40} bc='#FFDE4D' color='white' br={3} ml={5} />
-                </div>
+            <div className={styles.buttonContainer}>
+                <Button text='Next' w={185} h={40} bc='#FFC107' color='white' br={3} mr={5}/>
+                <Button text='Fill Later' w={185} h={40} bc='#FFDE4D' color='white' br={3} ml={5} />
             </div>
         </form>
-    )
+    );
 }
 
-export default EventSelection
+export default EventSelection;

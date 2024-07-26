@@ -1,0 +1,15 @@
+.container {
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.text {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 5px;
+}

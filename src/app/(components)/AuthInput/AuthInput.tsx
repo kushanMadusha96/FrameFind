@@ -3,6 +3,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FaEyeSlash } from "react-icons/fa";
+import styles from './AuthInput.module.css'; // Import the CSS module
 
 function AuthInput(props: { w: number | string, placeholder: string, rightIcon?: string, leftIcon: string, mt?: number, mb?: number, display?: string }) {
 
@@ -16,41 +17,20 @@ function AuthInput(props: { w: number | string, placeholder: string, rightIcon?:
     const LeftIconComponent = iconMapping[props.leftIcon];
     const RightIconComponent = iconMapping[props.rightIcon];
 
+    const containerStyle = {
+        '--mt': `${props.mt || 0}px`,
+        '--mb': `${props.mb || 0}px`,
+        '--display': props.display || 'block'
+    } as React.CSSProperties;
+
     return (
-        <div style={{ position: 'relative', width: props.w, marginTop: props.mt, marginBottom: props.mb,display: props.display }}>
-            <LeftIconComponent
-                color='gray'
-                style={{
-                    position: 'absolute',
-                    left: 8,
-                    top: '50%',
-                    transform: 'translateY(-50%)'
-                }}
-            />
+        <div className={styles.authInputContainer} style={{ ...containerStyle, width: props.w }}>
+            <LeftIconComponent className={styles.leftIcon} />
             <input
                 placeholder={props.placeholder}
-                style={{
-                    width: '100%',
-                    height: 40,
-                    fontSize: 12,
-                    border: '2px solid #EEEDEB',
-                    borderRadius: 8,
-                    outline: 'none',
-                    paddingLeft: 40,
-                    paddingRight: RightIconComponent ? 40 : 4
-                }}
+                className={`${styles.inputField} ${RightIconComponent ? styles.withRightIcon : ''}`}
             />
-            {RightIconComponent && (
-                <RightIconComponent
-                    color='gray'
-                    style={{
-                        position: 'absolute',
-                        right: 10,
-                        top: '50%',
-                        transform: 'translateY(-50%)'
-                    }}
-                />
-            )}
+            {RightIconComponent && <RightIconComponent className={styles.rightIcon} />}
         </div>
     );
 }

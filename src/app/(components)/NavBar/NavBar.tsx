@@ -1,7 +1,5 @@
 'use client'
-
 import React, { useState } from 'react'
-import styles from './NavBar.module.css'
 import Link from 'next/link';
 import Image from 'next/image'
 import logo from '../../../../public/logo2.png'
@@ -11,6 +9,7 @@ import DropDown from '../DropDown/DropDown';
 import inter from 'next/font/local'
 import user from '../../../../public/user.jpg'
 import { BsPersonCircle } from "react-icons/bs";
+import styles from './NavBar.module.css'
 
 function NavBar() {
   const [searchActive, setSearchActive] = useState(false);
@@ -20,76 +19,68 @@ function NavBar() {
     setSearchActive(!searchActive);
   };
   return (
-    <nav style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', borderBottom: '1px solid #EEEDEB' }}>
+    <nav className={styles.navbar}>
       <Image
         src={logo}
         width={100}
         height={70}
         alt="logo"
-        style={{ marginLeft: 10 }}
+        className={styles.logo}
       />
 
       {
         searchActive ?
 
-          <div style={{ display: 'flex', alignItems: 'center', position: 'relative', width: 'fit-content', marginLeft: 40 }}>
-            <div style={{ width: 25, height: 25, position: 'absolute', left: 10, }}>
+          <div className={styles.searchContainer}>
+            <div className={styles.userImage}>
               <Image
                 alt='searchedSeller'
                 src={user}
                 layout='fill'
                 objectFit='cover'
-                style={{ borderRadius: '50%' }}
+                className={styles.userImageContent}
               />
             </div>
             <input
               name='searchbar'
               placeholder='search photographer'
-              style={{
-                border: '1px solid #EEEDEB',
-                borderRadius: 10,
-                width: 500,
-                height: 35,
-                fontSize: 15,
-                paddingLeft: 50,
-                paddingRight: 50
-              }}
+              className={styles.searchInput}
             />
-            <div style={{ position: 'absolute', right: 10 }}>
+            <div className={styles.closeIcon}>
               <IoCloseCircleOutline color='gray' size={25} onClick={handleSearchClick} />
             </div>
           </div>
 
           :
 
-          <IoSearchSharp color='gray' style={{ marginLeft: 40 }} size={17} onClick={handleSearchClick} />
+          <IoSearchSharp color='gray' className={styles.searchIcon} size={17} onClick={handleSearchClick} />
 
       }
 
-      <ul style={{ display: 'flex', flexDirection: 'row', marginLeft: 40 }}>
+      <ul className={styles.navLinks}>
         <li>
-          <Link href="/" style={{ color: 'gray', fontSize: 15 }}>Contact</Link>
+          <Link href="/" className={styles.link}>Contact</Link>
         </li>
-        <li style={{ marginLeft: 30 }}>
-          <Link href="/" style={{ color: 'gray', fontSize: 15 }}>Idea</Link>
+        <li className={styles.linkItem}>
+          <Link href="/" className={styles.link}>Idea</Link>
         </li>
       </ul>
-      <div style={{ marginLeft: 40 }}>
+      <div className={styles.dropdowns}>
         <DropDown />
       </div>
-      <div style={{ marginLeft: 40 }}>
+      <div className={styles.dropdowns}>
         <DropDown />
       </div>
-      <div style={{ position: 'absolute', right: 20 }}>
+      <div className={styles.signInContainer}>
         {
           signIn
             ?
-            <div style={{ display: 'flex' }}>
+            <div className={styles.signInIcons}>
               <NotificationBell />
               <BsPersonCircle color='gray' size={20} />
             </div>
             :
-            <Button w={100} h={35} borderColor='#FFC107' borderWidth={2} text='Sign In' bc='white' color='#FFC107' br={7} fw='bold'/>
+            <Button w={100} h={35} borderColor='#FFC107' borderWidth={2} text='Sign In' bc='white' color='#FFC107' br={7} fw='bold' />
         }
       </div>
     </nav>
@@ -101,24 +92,10 @@ export default NavBar
 export function NotificationBell() {
   const notificationCount = 1;
   return (
-    <div style={{ position: 'relative', display: 'inline-block', marginRight: 30 }}>
+    <div className={styles.notificationContainer}>
       <IoNotificationsOutline color='gray' size={25} />
       {notificationCount > 0 && (
-        <span style={{
-          position: 'absolute',
-          top: -5,
-          right: -5,
-          backgroundColor: 'red',
-          color: 'white',
-          borderRadius: '50%',
-          padding: '2px 6px',
-          fontSize: '10px',
-          fontWeight: 'bold',
-          lineHeight: '1',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}>
+        <span className={styles.notificationCount}>
           {notificationCount}
         </span>
       )}

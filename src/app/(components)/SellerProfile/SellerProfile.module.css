@@ -1,0 +1,62 @@
+.container {
+    width: 300px;
+    max-height: 70%;
+    border: 1px solid black;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.profileImageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.profileNameContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.profileName {
+    display: block;
+    width: fit-content;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sectionTitle {
+    display: block;
+    width: fit-content;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.packageList {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactList {
+    display: flex;
+    flex-direction: column;
+}
+
+.socialIconsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.reviewsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.reviewsText {
+    color: #FFC107;
+    font-weight: bold;
+    font-size: 13px;
+    border-bottom: 1px solid black;
+}

@@ -1,0 +1,31 @@
+.previewContainer {
+    width: 500px;
+    height: fit-content;
+    margin-left: 10px;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.previewTitle {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.imageContainer {
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 18vw;
+    height: 17vw;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.arrowIcon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 10px;
+}

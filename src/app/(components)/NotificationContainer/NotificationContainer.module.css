@@ -1,0 +1,47 @@
+.container {
+    width: 320px;
+    max-height: 70vh;
+    overflow-y: auto;
+    border: 1px solid black;
+    margin-left: 10px;
+    border-radius: 5px;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Webkit browsers */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 15px;
+    z-index: 10;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.closeIcon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.notifications {
+    margin-left: 10px;
+}
+
+.undoMessage {
+    position: sticky;
+    bottom: 5px;
+    margin-left: 10px;
+}

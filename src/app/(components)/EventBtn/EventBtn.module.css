@@ -1,0 +1,25 @@
+/* EventBtn.module.css */
+.eventButton {
+    display: flex;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.eventText {
+    font-size: 13px;
+}
+
+.icon {
+    margin-left: 20px;
+    color: #FFC107;
+}
+
+.selectedIcon {
+    font-size: 18px;
+}
+
+.addIcon {
+    font-size: 18px;
+}

@@ -1,39 +1,37 @@
 'use client'
 
-import React, { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import React, { useState } from 'react';
 import { IoChevronDown } from "react-icons/io5";
+import styles from './DropDown.module.css'; // Import the CSS module
 
 function DropDown() {
 
-    const [showMenu, setShowMenu] = useState(false)
+    const [showMenu, setShowMenu] = useState(false);
 
     const handleShowMenu = () => {
-        setShowMenu(!showMenu)
-    }
+        setShowMenu(!showMenu);
+    };
 
     return (
         <div>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }} >
-                <button style={{ color: 'gray', fontSize: 15 }} onClick={handleShowMenu}>by Location</button>
-                <IoChevronDown style={{ marginLeft: 10, color: 'gray' }} />
+            <div className={styles.dropdownContainer}>
+                <button className={styles.dropdownButton} onClick={handleShowMenu}>by Location</button>
+                <IoChevronDown className={styles.chevronIcon} />
             </div>
             {showMenu && <Menu />}
         </div>
-
-    )
+    );
 }
 
-export default DropDown
+export default DropDown;
 
 export function Menu() {
     return (
-        <div style={{ border: '1px solid #EEEDEB', paddingTop: 5, paddingBottom: 5, paddingLeft: 10, paddingRight: 10, borderRadius: 5, position: 'absolute', marginTop: 5 }}>
-            <span style={{ display: 'block', fontSize: 15 }}>Polonnaruwa</span>
-            <span style={{ display: 'block', fontSize: 15 }}>Polonnaruwa</span>
-            <span style={{ display: 'block', fontSize: 15 }}>Polonnaruwa</span>
-            <span style={{ display: 'block', fontSize: 15 }}>Polonnaruwa</span>
+        <div className={styles.menu}>
+            <span className={styles.menuItem}>Polonnaruwa</span>
+            <span className={styles.menuItem}>Polonnaruwa</span>
+            <span className={styles.menuItem}>Polonnaruwa</span>
+            <span className={styles.menuItem}>Polonnaruwa</span>
         </div>
-    )
+    );
 }
-

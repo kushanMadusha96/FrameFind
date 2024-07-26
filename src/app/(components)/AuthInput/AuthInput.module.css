@@ -1,0 +1,39 @@
+/* AuthInput.module.css */
+.authInputContainer {
+    position: relative;
+    width: 100%;
+    margin-top: var(--mt);
+    margin-bottom: var(--mb);
+    display: var(--display);
+}
+
+.leftIcon {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.rightIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.inputField {
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    border: 2px solid #EEEDEB;
+    border-radius: 8px;
+    outline: none;
+    padding-left: 40px;
+    padding-right: 4px;
+}
+
+.withRightIcon {
+    padding-right: 40px;
+}
