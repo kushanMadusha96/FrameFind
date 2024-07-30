@@ -32,12 +32,13 @@ import { use } from "react";
 import Review from "./(components)/Review/Review";
 import HomePage from "./(pages)/Homepage/HomePage";
 import { LayoutRouter } from "next/dist/server/app-render/entry-base";
+import Photographer from "./(pages)/Photographer/Photographer";
 
 export default function Home() {
   return (
     <div style={{}}>
       <NavBar />
-      <HomePage />
+      <Photographer />
     </div>
   );
 }
@@ -46,3 +47,4 @@ export default function Home() {
 // display: grid;
 // grid - template - columns: repeat(3, 1fr);
 // grid - row - gap: 2px;
+// FFC107

@@ -9,13 +9,13 @@
     }
 }
 
-@media (min-width:600px) and (max-width:899px) {
+@media (min-width:500px) and (max-width:899px) {
     .containerWidth {
         height: 35vw;
     }
 }
 
-@media (min-width:200px) and (max-width:599px) {
+@media (min-width:200px) and (max-width:499px) {
     .containerWidth {
         height: 70vw;
     }

@@ -18,7 +18,7 @@ const TextLabel: React.FC<TextLabelProps> = ({ event, price, ml = 0, mr = 0, mt 
         justifyContent: 'center',
         backgroundColor: '#EEEEEE',
         borderRadius: 15,
-        fontSize: 14,
+        fontSize: 12,
         alignItems: 'center',
         marginLeft: ml,
         marginRight: mr,
