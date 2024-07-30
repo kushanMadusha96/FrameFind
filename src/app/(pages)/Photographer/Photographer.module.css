@@ -96,7 +96,7 @@
     .name {
         font-size: 18px;
         font-weight: bold;
-        margin-left: 20px
+        margin-left: 10px
     }
 
     .btnDropDown {
@@ -118,30 +118,23 @@
 }
 
 
-@media (max-width:479px) {
-    .header {
-        display: flex;
-        flex-direction: column;
-        position: sticky;
-        top: 100px;
-        z-Index: 2;
-        background-color: white;
-        padding: 10px 0;
-    }
-
+@media (max-width:480px) {
     .btnDropDown {
-        display: flex;
-        width: 80vw;
+        width: fit-content;
         border: 1px solid #FFC107;
         border-radius: 5px;
         height: fit-content;
-        margin-top: 15px;
         margin-left: 5vw;
+        padding: 3px 3px;
     }
 
     .name {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
-        margin-left: 20px
+        margin-left: 10px
+    }
+
+    .btnText {
+        display: none;
     }
 }
