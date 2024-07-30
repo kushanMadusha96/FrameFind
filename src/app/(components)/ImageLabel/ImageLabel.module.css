@@ -10,6 +10,26 @@
 
 .text {
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 5px;
+}
+
+@media(max-width : 370px) {
+    .container {
+        width:80vw;
+        height: 35px;
+        display: inline-flex;
+        align-items: center;
+        background-color: #EEEEEE;
+        border-radius: 15px;
+    }
+    .text {
+        display: inline-block;
+        font-size: 14px;
+        margin-left: 5px;
+        max-width:80vw;
+        overflow-x: auto;
+        scrollbar-width: thin;
+    }
+    
 }

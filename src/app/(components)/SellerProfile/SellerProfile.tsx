@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import ProfileImage from '../ProfileImage/ProfileImage';
 import TextLabel from '../TextLabel/TextLabel';
@@ -9,13 +9,22 @@ import tiktoklogo from '../../../../public/tiktoklogo.png';
 import fblogo from '../../../../public/fblogo.png';
 import watsapplogo from '../../../../public/wts.png';
 import phoneImg from '../../../../public/call.png';
-import emailImg from '../../../../public/email.jpg';
+import emailImg from '../../../../public/email.png';
 import styles from './SellerProfile.module.css';
+import { RxCross2 } from "react-icons/rx";
 
-function SellerProfile() {
+type SellerProfileProps = {
+    setShowSellerPackage: (value: boolean) => void;
+};
+
+function SellerProfile({ setShowSellerPackage }: SellerProfileProps) {
+
+    const handlePopUp = () => {
+        setShowSellerPackage(false);
+    }
     return (
         <div className={styles.container}>
-            <MdKeyboardArrowLeft color='gray' size={25} />
+            <RxCross2 color='gray' size={25} className={styles.cross} onClick={() => handlePopUp()} />
             <div className={styles.profileImageContainer}>
                 <ProfileImage imgUrl={user} w={50} h={50} br={'50%'} alt='sellerProPic' />
             </div>

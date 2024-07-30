@@ -1,3 +1,22 @@
-.container {
-    position: relative
+@media (min-width:1281px) {
+    .containerWidth {
+        height: 20vw;
+    }
+}
+@media (min-width:900px) and (max-width:1280px) {
+    .containerWidth {
+        height: 25vw;
+    }
+}
+
+@media (min-width:600px) and (max-width:899px) {
+    .containerWidth {
+        height: 35vw;
+    }
+}
+
+@media (min-width:200px) and (max-width:599px) {
+    .containerWidth {
+        height: 70vw;
+    }
 }

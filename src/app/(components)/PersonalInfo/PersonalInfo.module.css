@@ -2,10 +2,10 @@
     width: 300px;
     max-height: 70%;
     border: 1px solid black;
-    margin-left: 10px;
     border-radius: 5px;
     padding: 0;
     position: relative;
+    background-color: white;
 }
 
 .closeIcon {

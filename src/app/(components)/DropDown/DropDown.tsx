@@ -14,8 +14,8 @@ function DropDown() {
 
     return (
         <div>
-            <div className={styles.dropdownContainer}>
-                <button className={styles.dropdownButton} onClick={handleShowMenu}>by Location</button>
+            <div className={styles.dropdownContainer} onClick={handleShowMenu}>
+                <button className={styles.dropdownButton}>by Location</button>
                 <IoChevronDown className={styles.chevronIcon} />
             </div>
             {showMenu && <Menu />}

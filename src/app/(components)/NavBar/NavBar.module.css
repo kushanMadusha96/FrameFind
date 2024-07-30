@@ -3,6 +3,12 @@
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid #EEEDEB;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    z-index: 2;
+    background-color: white;
   }
   
   .logo {
@@ -36,6 +42,7 @@
     font-size: 15px;
     padding-left: 50px;
     padding-right: 50px;
+    outline: none;
   }
   
   .closeIcon {

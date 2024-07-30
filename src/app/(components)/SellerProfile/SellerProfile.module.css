@@ -1,15 +1,25 @@
 .container {
-    width: 300px;
-    max-height: 70%;
-    border: 1px solid black;
+    width: 400px;
+    height: 'fit-content';
     margin-left: 10px;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px 10px 20px 10px;
+    background-color: #F5F7F8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 96px;
+    right: 10px;
+}
+
+.cross {
+    position: absolute;
+    right: 10px;
 }
 
 .profileImageContainer {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .profileNameContainer {
@@ -22,6 +32,7 @@
     width: fit-content;
     text-align: center;
     font-weight: bold;
+    margin-top: 3px;
 }
 
 .sectionTitle {
@@ -59,4 +70,22 @@
     font-weight: bold;
     font-size: 13px;
     border-bottom: 1px solid black;
+}
+
+
+@media (max-width:480px) {
+    .container {
+        width: 90vw;
+        height: 'fit-content';
+        border-radius: 5px;
+        background-color: #F5F7F8;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:370px) {
+    .contactList {
+        align-items: center;
+    }
 }

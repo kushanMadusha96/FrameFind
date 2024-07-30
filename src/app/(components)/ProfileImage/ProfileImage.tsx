@@ -3,9 +3,18 @@ import React from 'react'
 import seller from '../../../../public/user.jpg'
 import styles from './Profile.module.css'
 
-function ProfileImage(props: { imgUrl: string | StaticImageData, w: number | string, h: number | string, br?: number | string, alt: string, mr?: number, ml?: number }) {
+function ProfileImage(props: { imgUrl: string | StaticImageData, w?: number | string, h?: number | string, br?: number | string, alt: string, mr?: number, ml?: number }) {
     return (
-        <div style={{ width: props.w, height: props.h, marginRight: props.mr, marginLeft: props.ml }} className={styles.container}>
+        <div
+            style={{
+                width: props.w,
+                height: props.h,
+                marginRight: props.mr,
+                marginLeft: props.ml,
+                position:'relative'
+            }}
+            className={!props.h ? styles.containerWidth : ''}
+            >
             <Image
                 src={props.imgUrl}
                 alt={props.alt}

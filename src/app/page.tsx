@@ -30,12 +30,19 @@ import FormInput from "./(components)/FormInput/FormInput";
 import ProfileImage from "./(components)/ProfileImage/ProfileImage";
 import { use } from "react";
 import Review from "./(components)/Review/Review";
+import HomePage from "./(pages)/Homepage/HomePage";
+import { LayoutRouter } from "next/dist/server/app-render/entry-base";
 
 export default function Home() {
   return (
-    <>
-      <AuthBtn alt="wed"  imgUrl={user} text="wedw"/>
-    </>
+    <div style={{}}>
+      <NavBar />
+      <HomePage />
+    </div>
   );
 }
 // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+// display: grid;
+// grid - template - columns: repeat(3, 1fr);
+// grid - row - gap: 2px;
