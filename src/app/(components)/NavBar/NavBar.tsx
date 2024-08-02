@@ -71,12 +71,6 @@ export default function NavBar(props: { signUp: boolean }) {
             <Link href="/" className={styles.link}>Profile</Link>
           </li>
           <li className={styles.linkItem}>
-            <Link href="/" className={styles.link}>by Location</Link>
-          </li>
-          <li className={styles.linkItem}>
-            <Link href="/" className={styles.link}>by Event</Link>
-          </li>
-          <li className={styles.linkItem}>
             <Link href="/" className={styles.link}>Your Idea</Link>
           </li>
         </ul>
@@ -131,12 +125,6 @@ export function MobileNavBar({ onClickRxCrossIcon, onClickMenuIcon }: MobileNavB
       <ul className={styles.mobileNavLinks} style={{ display: displayList ? 'block' : 'none' }}>
         <li className={styles.mobileLinkItem}>
           <Link href="/" className={styles.mobileLink}>Profile</Link>
-        </li>
-        <li className={styles.mobileLinkItem}>
-          <Link href="/" className={styles.mobileLink}>by Location</Link>
-        </li>
-        <li className={styles.mobileLinkItem}>
-          <Link href="/" className={styles.mobileLink}>by Event</Link>
         </li>
         <li className={styles.mobileLinkItem}>
           <Link href="/" className={styles.mobileLink}>Your Idea</Link>
