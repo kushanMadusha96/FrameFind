@@ -68,6 +68,9 @@ export default function NavBar(props: { signUp: boolean }) {
 
         <ul className={styles.navLinks}>
           <li>
+            <Link href="/" className={styles.link}>Home</Link>
+          </li>
+          <li className={styles.linkItem}>
             <Link href="/" className={styles.link}>Profile</Link>
           </li>
           <li className={styles.linkItem}>
@@ -123,6 +126,9 @@ export function MobileNavBar({ onClickRxCrossIcon, onClickMenuIcon }: MobileNavB
         )}
       </div>
       <ul className={styles.mobileNavLinks} style={{ display: displayList ? 'block' : 'none' }}>
+        <li className={styles.mobileLinkItem}>
+          <Link href="/" className={styles.mobileLink}>Home</Link>
+        </li>
         <li className={styles.mobileLinkItem}>
           <Link href="/" className={styles.mobileLink}>Profile</Link>
         </li>
