@@ -31,7 +31,6 @@
 
 .btnDropDown {
     display: flex;
-    width: 180px;
     align-items: center;
     justify-content: space-around;
     border: 1px solid #FFC107;
@@ -39,12 +38,13 @@
     height: fit-content;
     margin-right: 20px;
     margin-top: 5px;
-    padding: 5px 0
+    padding: 5px 6px
 }
 
 .btnText {
     color: #FFC107;
     font-size: 13px;
+    margin-right: 5px;
 }
 
 @media (min-width:1281px) {
@@ -101,7 +101,6 @@
 
     .btnDropDown {
         display: flex;
-        width: 150px;
         align-items: center;
         justify-content: space-around;
         border: 1px solid #FFC107;
@@ -109,11 +108,13 @@
         height: fit-content;
         margin-right: 20px;
         margin-top: 5px;
+        padding: 5px 6px
     }
 
     .btnText {
         color: #FFC107;
         font-size: 12px;
+        margin-right: 5px;
     }
 }
 
@@ -136,5 +137,11 @@
 
     .btnText {
         display: none;
+    }
+}
+
+@media(max-width:767px) {
+    .header {
+        top: 50px;
     }
 }

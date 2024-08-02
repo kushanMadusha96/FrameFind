@@ -37,7 +37,7 @@ import Photographer from "./(pages)/Photographer/Photographer";
 export default function Home() {
   return (
     <div style={{}}>
-      <NavBar />
+      <NavBar signUp/>
       <Photographer />
     </div>
   );
