@@ -24,7 +24,7 @@
   align-items: center;
   position: relative;
   width: fit-content;
-  margin-left: 40px;
+  margin: auto;
 }
 
 .userImage {
@@ -34,9 +34,9 @@
   left: 10px;
 }
 
-.userImageContent {
+/* .userImageContent {
   border-radius: 50%;
-}
+} */
 
 .searchInput {
   border: 1px solid #EEEDEB;
@@ -44,8 +44,8 @@
   width: 500px;
   height: 35px;
   font-size: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 10px;
+  padding-right: 40px;
   outline: none;
 }
 
@@ -70,6 +70,12 @@
   text-decoration: none;
 }
 
+.activeLink {
+  color: #FFC107;
+  font-size: 15px;
+  text-decoration: none;
+}
+
 .linkItem {
   margin-left: 30px;
 }
@@ -83,17 +89,18 @@
   display: flex;
 }
 
+.editInfoContainer {
+  margin-top: 10px;
+}
+
 /* Mobile NavBar */
 
 .mobileNavBar {
   display: none;
   height: 50px;
-  z-index: 2;
   border-bottom: 1px solid #EEEDEB;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
-  position: sticky;
-  top: 0;
 }
 
 .mobileNavBarHeader {
@@ -103,8 +110,19 @@
   justify-content: space-between;
 }
 
+.searchMenuContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mobileSearchIcon {
+  margin-right: 15px;
+}
+
 .menuIcon {
   margin-right: 10px;
+  margin-left: 15px;
 }
 
 .mobileNavLinks {
@@ -122,18 +140,28 @@
   background-color: #EEEEEE;
 }
 
-.mobileLink {
-  font-size: 15px;
-}
-
 /*media query */
 
-@media(max-width : 767px) {
+@media(max-width : 768px) {
   .navbar {
     display: none;
   }
 
   .mobileNavBar {
     display: block;
+  }
+
+  .searchContainer {
+    width: auto;
+    margin: 0;
+    padding: 0 15px;
+  }
+  .searchInput {
+    width: 100%;
+    font-size: 13px;
+  }
+  
+  .closeIcon {
+    right: 25px;
   }
 }

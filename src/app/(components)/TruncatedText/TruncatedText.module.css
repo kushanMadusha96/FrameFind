@@ -1,0 +1,12 @@
+.eventText {
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+.seeMore {
+    font-size: 13px;
+    color: #FFC107;
+    font-weight: 500;
+    cursor: pointer;
+}

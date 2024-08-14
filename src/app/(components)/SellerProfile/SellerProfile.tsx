@@ -13,18 +13,10 @@ import emailImg from '../../../../public/email.png';
 import styles from './SellerProfile.module.css';
 import { RxCross2 } from "react-icons/rx";
 
-type SellerProfileProps = {
-    setShowSellerPackage: (value: boolean) => void;
-};
-
-function SellerProfile({ setShowSellerPackage }: SellerProfileProps) {
-
-    const handlePopUp = () => {
-        setShowSellerPackage(false);
-    }
+function SellerProfile(props: { onClickCross?: () => void, onClickSeeReview?: () => void }) {
     return (
         <div className={styles.container}>
-            <RxCross2 color='gray' size={25} className={styles.cross} onClick={() => handlePopUp()} />
+            <RxCross2 color='gray' size={25} className={styles.cross} onClick={props.onClickCross} />
             <div className={styles.profileImageContainer}>
                 <ProfileImage imgUrl={user} w={50} h={50} br={'50%'} alt='sellerProPic' />
             </div>
@@ -49,7 +41,7 @@ function SellerProfile({ setShowSellerPackage }: SellerProfileProps) {
                 <ProfileImage imgUrl={tiktoklogo} w={30} h={30} alt='tiktokImg' br={'50%'} ml={3} mr={3} />
             </div>
             <div className={styles.reviewsContainer}>
-                <span className={styles.reviewsText}>REVIEWS</span>
+                <button className={styles.reviewBtn} onClick={props.onClickSeeReview}>See All Reviews</button>
             </div>
         </div>
     )

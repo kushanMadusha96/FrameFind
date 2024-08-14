@@ -3,12 +3,13 @@
     height: 'fit-content';
     margin-left: 10px;
     border-radius: 5px;
-    padding: 10px 10px 20px 10px;
+    padding: 10px 10px 10px 10px;
     background-color: #F5F7F8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     position: fixed;
-    top: 96px;
+    top: 110px;
     right: 10px;
+    /* z-index: 4; */
 }
 
 .cross {
@@ -56,7 +57,7 @@
 .socialIconsContainer {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -65,11 +66,18 @@
     justify-content: center;
 }
 
-.reviewsText {
-    color: #FFC107;
-    font-weight: bold;
+.reviewBtn {
+    width: calc(100% - 30px);
+    color: white;
     font-size: 13px;
-    border-bottom: 1px solid black;
+    margin-top: 5px;
+    padding: 10px 0;
+    background-color: #FFC107;
+    border-radius: 3px;
+}
+
+.reviewBtn:hover {
+    font-weight: bold;
 }
 
 
@@ -87,5 +95,8 @@
 @media (max-width:370px) {
     .contactList {
         align-items: center;
+    }
+    .reviewBtn {
+        width: 80vw;
     }
 }

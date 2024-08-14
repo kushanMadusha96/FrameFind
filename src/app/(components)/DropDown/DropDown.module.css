@@ -3,15 +3,20 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 5px 7px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #EEEDEB;
 }
 
 .dropdownButton {
     color: gray;
-    font-size: 15px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .chevronIcon {
@@ -24,13 +29,23 @@
     padding: 5px 10px;
     border-radius: 5px;
     position: absolute;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     background: white;
-    z-index: 1000;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .menuItem {
     display: block;
     font-size: 15px;
     padding: 5px 0;
+}
+
+@media (max-width:370px) {
+    .dropdownButton {
+        font-size: 10px;
+    }
+    .menuItem {
+        font-size: 10px;
+    }
 }

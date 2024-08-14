@@ -1,11 +1,16 @@
 .form {
     width: 400px;
     height: fit-content;
-    border: 1px solid black;
     border-radius: 3px;
     margin-left: 10px;
-    padding: 5px;
-    padding-bottom: 10px;
+    padding: 5px 15px 15px 15px; 
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 3;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header {
@@ -24,7 +29,6 @@
 .inputsContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .buttonsContainer {
@@ -32,4 +36,10 @@
     display: flex;
     justify-content: space-between;
     width: 350;
+}
+
+@media (max-width : 400px) {
+    .form {
+        width: auto;
+    }
 }

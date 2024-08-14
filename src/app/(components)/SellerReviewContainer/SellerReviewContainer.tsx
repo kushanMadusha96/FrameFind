@@ -3,7 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 import ProfileImage from '../ProfileImage/ProfileImage';
 import seller from '../../../../public/user.jpg'
 import FiveStar from '../FiveStar/FiveStar';
-import Review from '../Review/Review';
+import Review from '../ReviewModal/Review';
 
 function SellerReviewContainer() {
   const REVIEWS = [

@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import NavBar from "./(components)/NavBar/NavBar";
 import Button from "./(components)/Button/Button";
@@ -29,16 +28,14 @@ import FiveStar from "./(components)/FiveStar/FiveStar";
 import FormInput from "./(components)/FormInput/FormInput";
 import ProfileImage from "./(components)/ProfileImage/ProfileImage";
 import { use } from "react";
-import Review from "./(components)/Review/Review";
-import HomePage from "./(pages)/Homepage/HomePage";
+import HomePage from "./(pages)/homepage/page";
 import { LayoutRouter } from "next/dist/server/app-render/entry-base";
-import Photographer from "./(pages)/Photographer/Photographer";
+import Photographer from "./(pages)/photographer/page";
 
 export default function Home() {
   return (
-    <div style={{}}>
-      <NavBar signUp/>
-      <Photographer />
+    <div>
+      <HomePage />
     </div>
   );
 }

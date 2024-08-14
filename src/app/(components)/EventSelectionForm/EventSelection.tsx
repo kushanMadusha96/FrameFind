@@ -10,7 +10,7 @@ type FormInputType = {
     lbl: string;
 };
 
-function EventSelection() {
+function EventSelection(props: { onClickNext?: () => void, onClickFillLater?: () => void }) {
     const [formInputs, setFormInputs] = useState<FormInputType[]>([]);
 
     const handleToggleInput = (label: string) => {
@@ -28,8 +28,11 @@ function EventSelection() {
         return formInputs.some(input => input.lbl === label);
     };
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    };
     return (
-        <form className={styles.formContainer}>
+        <form className={styles.formContainer} onSubmit={handleSubmit}>
             <div className={styles.header}>
                 <span className={styles.headerText}>Select Your Events</span>
             </div>
@@ -47,14 +50,14 @@ function EventSelection() {
             <div className={styles.inputContainer}>
                 {
                     formInputs.map((form_input, index) => (
-                        <FormInput key={index} w={370} id={form_input.lbl} type='text' lbl={form_input.lbl} placeholder='Enter starter price' />
+                        <FormInput key={index} id={form_input.lbl} type='text' lbl={form_input.lbl} placeholder='Enter starter price' />
                     ))
                 }
             </div>
 
             <div className={styles.buttonContainer}>
-                <Button text='Next' w={185} h={40} bc='#FFC107' color='white' br={3} mr={5}/>
-                <Button text='Fill Later' w={185} h={40} bc='#FFDE4D' color='white' br={3} ml={5} />
+                <Button text='Next' w={195} h={40} bc='#FFC107' color='white' br={3} mr={5} onClick={props.onClickNext} />
+                <Button text='Fill Later' w={195} h={40} bc='#FFDE4D' color='white' br={3} ml={5} onClick={props.onClickFillLater} />
             </div>
         </form>
     );

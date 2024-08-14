@@ -1,0 +1,102 @@
+.container {
+    width: 400px;
+    /* height: fit-content; */
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 5px 15px 10px 15px;
+    background-color: #F5F7F8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 110px;
+    right: 10px;
+    /* z-index: 4; */
+}
+
+.titleContainer {
+    display: flex;
+    position: sticky;
+    top: 10px;
+    padding-bottom: 15px;
+}
+
+.title {
+    width: fit-content;
+    margin: auto;
+    font-weight: bold;
+}
+
+.cross {
+    position: absolute;
+    right: 10px;
+}
+
+.reviewContainer {
+    height: 400px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.profileContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.profileName {
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.reviewMeta {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.reviewDate {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.reviewText {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.reviewBtn {
+    width: 100%;
+    color: #FFC107;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-top: 10px;
+    background-color: #EEEDEB;
+    border-radius: 3px;
+    position: sticky;
+    bottom: 0;
+}
+
+.reviewBtn:hover {
+    background-color: #FFC107;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+@media (max-width:480px) {
+    .container {
+        width: 90vw;
+        height: 'fit-content';
+        border-radius: 5px;
+        background-color: #F5F7F8;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+    }
+}
+
+/* @media (max-width:370px) {
+    .contactList {
+        align-items: center;
+    }
+} */

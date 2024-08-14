@@ -11,8 +11,8 @@ type TextLabelProps = {
 
 const TextLabel: React.FC<TextLabelProps> = ({ event, price, ml = 0, mr = 0, mt = 0, mb = 0 }) => {
     const style = {
-        paddingLeft: 10,
-        paddingRight: 10,
+        // paddingLeft: 10,
+        // paddingRight: 10,
         height: 35,
         display: 'inline-flex',
         justifyContent: 'center',

@@ -1,20 +1,23 @@
 /* EventSelection.module.css */
 .formContainer {
-    width: 420px;
-    max-width: 420px;
+    width: 400px;
     height: fit-content;
     border-radius: 3px;
     margin-left: 10px;
-    padding-bottom: 20px;
+    padding: 20px 15px 15px 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 3;
+    background-color: white;
 }
 
 .header {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
     margin-bottom: 20px;
-    padding-top: 15px;
 }
 
 .headerText {
@@ -37,7 +40,7 @@
 .inputContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 5px;
 }
 
@@ -47,3 +50,13 @@
     margin-top: 10px;
 }
 
+@media (max-width : 430px) {
+    .formContainer {
+        width: auto;
+    }
+
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+    }
+}

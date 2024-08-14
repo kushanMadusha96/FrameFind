@@ -5,7 +5,7 @@ import { RxCrossCircled } from "react-icons/rx";
 import { RiPlayListAddFill } from "react-icons/ri";
 import styles from './EventBtn.module.css'; // Import the CSS module
 
-function EventBtn(props: { event: string, ml?: number, mr?: number, mt?: number, mb?: number, onClick?: () => void, isSelect: boolean }) {
+function EventBtn(props: { event: string, ml?: number, mr?: number, mt?: number, mb?: number, onClick?: () => void, isSelect?: boolean }) {
     return (
         <div
             className={styles.eventButton}

@@ -1,11 +1,10 @@
 import React from 'react';
 import { RxCross2 } from "react-icons/rx";
-import Review from '../Review/Review';
 import FiveStar from '../FiveStar/FiveStar';
 import Button from '../Button/Button';
 import styles from './WriteReview.module.css';
 
-function WriteReview() {
+function WriteReview(props: { onClickCross?: () => void, onClickSend?: () => void }) {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
@@ -13,13 +12,14 @@ function WriteReview() {
                     Write Your Review,
                 </span>
                 <RxCross2
+                    onClick={props.onClickCross}
                     className={styles.closeIcon}
                     size={20}
                 />
             </div>
             <input
                 type='text'
-                placeholder='write review'
+                placeholder='Write Review'
                 className={styles.inputField}
             />
             <span className={styles.ratingLabel}>Rate work,</span>
@@ -28,13 +28,15 @@ function WriteReview() {
             </div>
             <div className={styles.buttonContainer}>
                 <Button
+                    fs={13}
                     w={'100%'}
-                    h={35}
-                    text='SEND REVIEW'
-                    borderColor='#FFC107'
-                    color='#FFC107'
-                    borderWidth={1}
-                    br={5}
+                    text='Send Review'
+                    bc='#FFC107'
+                    color='white'
+                    br={3}
+                    pt={5}
+                    pb={5}
+                    onClick={props.onClickSend}
                 />
             </div>
         </div>

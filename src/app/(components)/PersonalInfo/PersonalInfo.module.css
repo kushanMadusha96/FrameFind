@@ -1,11 +1,15 @@
 .container {
     width: 300px;
-    max-height: 70%;
-    border: 1px solid black;
+    max-height: calc(100vh - 100px);
+    overflow-y: scroll;
     border-radius: 5px;
-    padding: 0;
-    position: relative;
+    padding: 10px 0;
+    position: absolute;
     background-color: white;
+    z-index: 4;
+    right: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    scrollbar-width: none;
 }
 
 .closeIcon {
@@ -32,9 +36,12 @@
     font-weight: bold;
 }
 
-.textLabels, .imageLabels {
+.textLabels,
+.imageLabels {
     display: flex;
     flex-direction: column;
+    width: 90%;
+    margin: auto
 }
 
 .buttonContainer {
@@ -42,4 +49,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
+}
+
+@media(max-width:350px) {
+    .container {
+        left: 0;
+        margin: auto;
+    }
 }

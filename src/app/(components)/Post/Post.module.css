@@ -2,9 +2,48 @@
     width: 100%;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
+
+.profileContainer {
+    position: relative
+}
+
+.profileContainer:hover .nextIcon {
+    opacity: 1;
+    transform: translateX(0); /* Ending position */
+}
+
+
+.profileContainer:hover .prevIcon {
+    opacity: 1;
+    transform: translateX(0); /* Ending position */
+}
+
 .profileImage {
     padding-right: 10px;
 }
+
+.nextIcon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+    opacity: 0;
+    transform: translateX(10px); /* Starting position */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animation properties */
+}
+
+.prevIcon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    margin: auto;
+    opacity: 0;
+    transform: translateX(-10px); /* Starting position */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animation properties */
+}
+
 .profileInfo {
     width: 100%;
     height: fit-content;
@@ -21,7 +60,6 @@
 
 .location {
     font-size: 14px;
-    /* font-weight: 600; */
     color: #FFC107;
 }
 
@@ -29,7 +67,7 @@
     margin-top: 6px;
 }
 
-.eventText {
+/* .eventText {
     font-size: 15px;
     font-weight: 500;
 
@@ -39,7 +77,7 @@
     font-size: 13px;
     margin-left: 5px;
     border-bottom: 1px solid black;
-}
+} */
 
 .dateInfo {
     margin-top: 5px;
@@ -66,7 +104,7 @@
         font-weight: 600;
         font-size: 13px;
     }
-    
+
     .location {
         font-size: 13px;
         color: #FFC107;
